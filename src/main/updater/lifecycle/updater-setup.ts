@@ -140,7 +140,8 @@ export class UpdaterSetup extends UpdaterDownloadInstall {
       this.sendErrorStatus(`The server update did not complete: ${serveHandoffFailure}`, true)
     }
 
-    if (!app.isPackaged) {
+    // Fork builds (x.y.z-local.*) would be offered the official release, which drops their patches.
+    if (!app.isPackaged || app.getVersion().includes('-local.')) {
       return
     }
 
