@@ -297,6 +297,14 @@ export function createAppCommandHandlers(
           : revealRightSidebarTab('sidebar.sourceControl.toggle', 'source-control')
     ],
     ['sidebar.checks.toggle', () => revealRightSidebarTab('sidebar.checks.toggle', 'checks')],
-    ['sidebar.ports.toggle', () => revealRightSidebarTab('sidebar.ports.toggle', 'ports')]
+    ['sidebar.ports.toggle', () => revealRightSidebarTab('sidebar.ports.toggle', 'ports')],
+    [
+      'terminal.agentAgeBadge.toggle',
+      () =>
+        claim('terminal.agentAgeBadge.toggle', () => {
+          const { settings, updateSettings } = useAppStore.getState()
+          void updateSettings({ terminalAgentAgeBadge: settings?.terminalAgentAgeBadge === false })
+        })
+    ]
   ])
 }

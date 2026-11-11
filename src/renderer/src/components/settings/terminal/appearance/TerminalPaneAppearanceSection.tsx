@@ -4,6 +4,7 @@ import { NumberField, SettingsSubsectionHeader } from '../../form-controls/Setti
 import { SearchableSetting } from '../../section-layout/SearchableSetting'
 import { clampNumber, resolvePaneStyleOptions } from '@/lib/terminal-theme'
 import { useTranslate } from '@/i18n/use-translate'
+import { TerminalAgentAgeBadgeSettings } from './TerminalAgentAgeBadgeSettings'
 
 type TerminalPaneAppearanceSectionProps = {
   settings: GlobalSettings
@@ -87,6 +88,7 @@ export function TerminalPaneAppearanceSection({
             }
           />
         </SearchableSetting>
+        <TerminalAgentAgeBadgeSettings settings={settings} updateSettings={updateSettings} />
       </div>
     </section>
   )

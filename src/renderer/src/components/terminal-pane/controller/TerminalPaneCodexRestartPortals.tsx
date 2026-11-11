@@ -9,6 +9,7 @@ import { WorkerAutoCloseBanner } from '../../orchestration-crew/WorkerAutoCloseB
 import { WslDistroStoppedHoldCard } from '../session-restore/wsl-distro/WslDistroStoppedHoldCard'
 import { ORCA_LAYOUT_OWNER_IS_MAIN } from '../../../../../shared/layout-owner-switch'
 import type { TerminalPaneController } from './use-terminal-pane-controller'
+import { AgentAgeBadge } from '../agent-age-badge/AgentAgeBadge'
 
 export function TerminalPaneCodexRestartPortals({
   controller
@@ -91,6 +92,7 @@ export function TerminalPaneCodexRestartPortals({
               worktreeId={worktreeId}
               isVisible={isVisible}
             />
+            <AgentAgeBadge key={`agent-age-badge-${pane.id}`} tabId={tabId} leafId={pane.leafId} />
             {holdBanner}
           </>,
           pane.container,

@@ -46,6 +46,8 @@ const STATIC_TITLE_COPY = {
   'sidebar.search.toggle': () => translate('keybindings.title.da4e681113', 'Show search'),
   'sidebar.sourceControl.toggle': () =>
     translate('keybindings.title.44e8b7dcb5', 'Show source control'),
+  'terminal.agentAgeBadge.toggle': () =>
+    translate('keybindings.title.agentAgeBadgeToggle', 'Toggle agent age badge'),
   'sidebar.checks.toggle': () => translate('keybindings.title.e37b19864c', 'Show checks'),
   'sidebar.ports.toggle': () => translate('keybindings.title.cb816639bd', 'Show ports'),
   'sidebar.sleepingWorkspaces.toggle': () =>

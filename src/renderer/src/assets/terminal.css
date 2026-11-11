@@ -305,6 +305,24 @@
   cursor: grabbing;
 }
 
+/* Sits under the title strip and its right-side actions; faint until the pane is hovered. */
+.pane-agent-age-badge {
+  position: absolute;
+  top: calc(var(--orca-pane-title-height) + var(--orca-pane-top-banner-height, 0px) + 4px);
+  right: 10px;
+  z-index: 5;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 11px;
+  line-height: 1;
+  opacity: 0.32;
+  pointer-events: none;
+  transition: opacity 150ms;
+}
+
+.pane:hover .pane-agent-age-badge {
+  opacity: 0.9;
+}
+
 .session-restored-banner {
   position: absolute;
   top: 0;

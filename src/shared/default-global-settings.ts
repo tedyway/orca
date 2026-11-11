@@ -17,6 +17,7 @@ import {
 import { DEFAULT_SOURCE_CONTROL_GROUP_ORDER } from './source-control/listing/source-control-group-order'
 import { DESKTOP_TERMINAL_SCROLLBACK_ROWS_DEFAULT } from './terminal/replay/terminal-scrollback-policy'
 import { NESTED_WORKER_MAX_DEPTH_DEFAULT } from './orchestration/workers/nested-worker-depth'
+import { DEFAULT_AGENT_AGE_BADGE_SETTINGS } from './terminal/appearance/agent-age-badge-settings'
 
 export function buildDefaultSettings(args: {
   workspaceDir: string
@@ -104,6 +105,7 @@ export function buildDefaultSettings(args: {
     terminalActivePaneOpacity: 1,
     terminalPaneOpacityTransitionMs: 140,
     terminalDividerThicknessPx: 3,
+    ...DEFAULT_AGENT_AGE_BADGE_SETTINGS,
     // Why: Windows paste-on-right-click matches native convention; macOS/Linux keep right-click for the context menu.
     terminalRightClickToPaste: args.terminalRightClickToPaste,
     terminalRightClickToPasteDefaultedForPlatform: true,

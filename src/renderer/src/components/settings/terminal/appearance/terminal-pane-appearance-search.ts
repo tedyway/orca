@@ -30,6 +30,19 @@ export const getTerminalPaneAppearanceSearchEntries = createLocalizedCatalog(() 
       ...translateSearchKeyword('auto.components.settings.terminal.search.781f49d942', 'divider'),
       ...translateSearchKeyword('auto.components.settings.terminal.search.f637a7dee9', 'thickness')
     ]
+  },
+  {
+    title: translate('components.settings.terminal.agentAgeBadge.title', 'Agent age badge'),
+    description: translate(
+      'components.settings.terminal.agentAgeBadge.description',
+      'Faint corner label with the time since an agent pane last finished, colored by whether you have looked at it.'
+    ),
+    keywords: [
+      ...translateSearchKeyword('auto.components.settings.terminal.search.agent', 'agent'),
+      ...translateSearchKeyword('components.settings.terminal.search.age', 'age'),
+      ...translateSearchKeyword('components.settings.terminal.search.idle', 'idle'),
+      ...translateSearchKeyword('components.settings.terminal.search.unread', 'unread')
+    ]
   }
 ])
 

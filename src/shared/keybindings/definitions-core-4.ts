@@ -5,6 +5,14 @@ const WINDOWS_LINUX_TOGGLE_BINDINGS = ['Mod+Shift+F11', 'Mod+Shift+J']
 
 export const KEYBINDING_DEFINITION_CORE_4: readonly KeybindingDefinition[] = [
   {
+    id: 'terminal.agentAgeBadge.toggle',
+    title: 'Toggle Agent Age Badge',
+    group: 'Global',
+    scope: 'global',
+    searchKeywords: ['shortcut', 'agent', 'age', 'badge', 'idle', 'unread', 'toggle'],
+    defaultBindings: platformBindings(['Mod+Alt+U'])
+  },
+  {
     id: 'sidebar.projects.toggleCollapse',
     title: 'Collapse / Expand All Projects',
     group: 'Global',
